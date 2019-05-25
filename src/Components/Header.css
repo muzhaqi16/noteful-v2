@@ -1,0 +1,5 @@
+.header{
+    min-height:20vh;
+    background-color: blueviolet;
+    font-size: calc(10px + 2vmin);
+}

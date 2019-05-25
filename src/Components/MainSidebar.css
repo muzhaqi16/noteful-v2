@@ -1,0 +1,13 @@
+.sidebar{
+    background-color: chartreuse;
+    min-width: 30vw;
+    font-size: calc(10px + 2vmin);
+}
+.sidebar ul{
+    list-style-type: none;
+}
+.sidebar a{
+    text-decoration: none;
+    cursor: pointer;
+    color:white;
+}

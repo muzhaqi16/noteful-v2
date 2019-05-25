@@ -1,0 +1,17 @@
+.main-list{
+    min-width: 70vw;
+    background-color: blue;
+    text-align: left;
+}
+.main-list ul{
+    list-style-type: none;
+}
+.main-list li a{
+    font-size: calc(10px + 2vmin);
+    cursor: pointer;
+    color: white;
+    text-decoration: none;
+}
+.main-list p {
+    font-size:16px;
+}
