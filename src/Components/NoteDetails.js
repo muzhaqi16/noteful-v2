@@ -5,19 +5,24 @@ class NoteDetails extends React.Component {
     static contextType = NotefulContext;
 
     render() {
-        console.log(this.context);
-
-        const notes = this.context.data.notes;
         const { noteId } = this.props.match.params;
-        const note = notes.find(note => {
-            return note.id === noteId
-        });
-        console.log(note);
+        let notes = this.context.data.notes;
+        if (noteId) {
+            notes = notes.filter(
+                note => note.id === noteId
+            )
+        }
+        notes = notes.map(note =>
+            <div key={note.id}>
+                <h2>{note.name}</h2>
+                <p>Date Modified : {note.modified}</p>
+                <p>{note.content}</p>
+                <button>Delete</button>
+            </div>
+        );
         return (
             <div className="main-list">
-                <h2>{note.name}</h2>
-                <h3>{note.modified}</h3>
-                <p>{note.content}</p>
+                {notes}
             </div>
         );
     }
